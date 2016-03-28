@@ -1,0 +1,63 @@
+/*重置*/
+body, div{
+	margin: 0;
+	padding: 0;
+}
+html, body{
+	height: 100%;
+}
+/*页面元素部分*/
+/*用户列表*/
+#userList{
+	/*position: fixed;*/
+	left: 0;
+	top: 0;
+	float: left;  /*必须设置float 为了右边的框随他移动而移动*/
+	height: 100%;
+	width: 10%;
+	background-color: silver;
+}
+#userList:hover{
+	animation: expand 1.5s;
+	width: 20%;
+}
+/*聊天窗部分*/
+#viewArea{
+	background-color: #EEE;
+	float: left;
+	width: 90%;
+	height: 250px;	
+}
+#userList:hover+#viewArea{
+	animation: contract 1.5s;
+	width: 80%;
+}
+/*输入框部分*/
+#inputArea{
+	background-color: #DAA;
+	float: left;	
+	width: 90%;
+	height: 250px;		
+}
+#userList:hover+#viewArea+#inputArea{
+	animation: contract 1.5s;
+	width: 80%;
+}
+#textArea{
+	background-color: white;
+	margin: 5px;
+	height: 80%;
+}
+#sendBtn{
+	margin-right: 5px;
+	float: right;
+}
+/*动画部分*/
+@keyframes expand{
+	from {width: 10%;}
+	to {width: 20%;}
+}
+@keyframes contract{
+	from {width: 90%;}
+	to {width: 80%;}
+}
