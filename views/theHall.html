@@ -2,18 +2,48 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>the Hall</title>
-	<link rel="stylesheet" href="../css/theHallStyle.css">
-	<script src="../js/theHall.js" async></script>
+	<title>大厅</title>
+	<link rel="stylesheet" href="../stylesheets/theHall.css">
+	<script src="../javascripts/jquery.js" defer="defer"></script>	
+	<script src="../javascripts/socket.io.js" defer="defer"></script>	
+	<script src="../javascripts/theHall.js" defer="defer"></script>
 </head>
 <body>
-	<header>欢迎来到聊天室</header>
-	<ul id="roomList">
-		<li><a href="./room/room_1">1号</a></li>
-		<li><a href=""></a></li>
-		<li><a href=""></a></li>
-		<li><a href=""></a></li>
-		<li><a href=""></a></li>
-	</ul>	
+	<div id="mask"></div>	
+	<div id="header">
+		<img src={{avatar}} alt="头像" id="avatar" />
+		<p>{{username}}</br>
+			<b>登出</b>
+		</p>
+		<img src="../images/setting.png" alt="" id="setting" />
+		<div id="panel">
+			<label>
+				改变头像
+				<input type="file" id="changeAvatar">
+			</label>
+		</div>
+	</div>
+	<div id="rooms">
+		<div id="status">
+			<p>
+				<a></a>
+			</p>
+				<button id="createBtn">创建房间</button>
+		</div>
+		<ul id="colName">
+			<li>房间名字</li>
+			<li>房间主人</li>
+			<li>现有人数/最大人数</li>
+		</ul>
+		<div id="roomList">			
+		</div>
+	</div>	
+	<div id="tip">欢迎来到聊天室, {{username}}</div>
+	<div id="createInfo">
+		<p>房间名&nbsp:<input type="text" id="inputName" /></p>
+		<p>房间人数:<input type="text" id="inputNumber" /></p>
+		<button id="confirm">确认</button>
+		<button id="cancel">取消</button>
+	</div>
 </body>
 </html>

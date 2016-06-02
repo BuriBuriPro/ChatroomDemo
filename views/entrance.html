@@ -2,17 +2,21 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Entrance</title>
-	<link rel="stylesheet" href="../stylesheets/entrance.css">
-	<script src="../javascripts/entrance.js" async></script>
+	<title>入口</title>
+	<link rel="stylesheet" href="../stylesheets/entrance.css">	
+	<script src="../javascripts/jquery.js" defer="defer"></script>
+	<script src="../javascripts/entrance.js" defer="defer"></script>
 </head>
 <body>
-	<img id="logo" src="../images/logo.jpg" alt="the Logo of the Website">
-	<!-- <div id="loginBox"> -->
-	<form id="entranceForm" action="theHall" method="post">
-		Username:<input type="text" name="username" maxlength="10" />
-		<!-- 密  码:<input type="password" name="password"/>		 -->
-		<button type="submit">Enter</button>	
-	</form>
+	<div id="etrBox">
+		<img id="etrLogo" src="../images/logo.jpg" alt="网站Logo">
+			<p>
+				用户名&nbsp<input type="text" name="username" maxlength="10" required/>
+			</p>
+			<p>
+				密&nbsp码&nbsp<input type="password" name="username" maxlength="10" required/>
+			</p>
+			<button type="submit">进&nbsp&nbsp入</button>	
+	</div>
 </body>
 </html>

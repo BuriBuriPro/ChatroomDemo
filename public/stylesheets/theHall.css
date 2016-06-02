@@ -1,0 +1,168 @@
+/*样式重置*/
+body, div, ul, p{
+	margin: 0;
+	padding: 0;
+}
+/*主页背景*/
+body{
+	background-color: #90d7ec;
+}
+/*顶栏*/
+#header{
+	top: 0;
+	width: 650px;
+	height: 50px;
+	margin: 0 auto;
+	padding: 5px;
+	line-height: 50px;
+}
+#header #avatar{
+	height: 100%;
+	float: left;
+	margin-right: 5px;
+	border-radius: 3px
+}
+#header p{
+	width: 50px;
+	float: left;	
+	/*background-color: #fff;*/
+	line-height: 100%;
+	font-size: 20px;
+}
+#header p b{
+	display: block;
+	margin-top: 5px;
+	cursor: pointer;
+	font-size: 15px;
+}
+#header #setting{
+	height: 80%;
+	float: left;
+	margin-left: 10px;
+	margin-top: 5px;
+	cursor: pointer;
+}
+/*大厅面板*/
+#rooms{
+	background-color: #FDFDFD;
+	margin: 0px auto;
+	width: 650px;
+}
+/*大厅状态*/
+#rooms #status{
+	background-color: #f2f2f2;
+	width: 100%;
+	height: 30px;
+	border-bottom: 3px solid #B2BE7E;
+}
+#rooms #status p{
+	height: 100%;	
+	line-height: 30px;
+	text-indent: 3px;
+	float: left;
+}
+#rooms #status b{
+	cursor: pointer;
+}
+#rooms #status #createBtn{
+	float: right;
+	height: 30px;
+	width: 100px;
+	border: none;
+	background-color: #fff;
+	cursor: pointer;
+}
+/*房间列表*/
+/*列的名称*/
+#colName{
+	background-color: #f2f2f2; 
+	padding: 5px;
+	overflow: hidden;
+	border-bottom: 1px solid silver;
+}
+#colName li{
+	list-style: none;
+	float: left;
+	width: 33%;
+}
+/*房间列表*/
+#roomList ul{
+	padding: 5px;
+	overflow: hidden;
+	border-bottom: 1px solid silver;
+}
+#roomList ul li{
+	list-style: none;
+	float: left;
+	width: 33%;
+}
+/*控制每隔一行颜色不一样*/
+#roomList ul:nth-of-type(even){
+	background-color: #f2f2f2;
+}
+/*控制房间名字部分鼠标变为手势*/
+#roomList ul li:nth-of-type(1) a{
+	cursor: pointer;
+}
+/*提示框样式*/
+#tip{
+	position: fixed;
+	width: 300px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	top: 50%;
+	right: 0;
+	display: none;
+	color: #fff;
+	background-color: #000;
+	opacity: 0.5;	
+	z-index: 3
+}
+/*创建房间提示框样式*/
+#createInfo{
+	display: none;
+	position: fixed;
+	width: 300px;
+	height: 120px;
+	top: 150px;
+	left: 350px;
+	background-color: #000;
+	opacity: 0.8;		
+	color: white;
+	z-index: 4;
+}
+#createInfo p{
+	display: block;
+	margin: 10px auto;
+	width: 80%;
+}
+#createInfo button:first-of-type{
+	margin-left: 100px;
+}
+/*遮罩层*/
+#mask{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 3;
+	display: none;	
+}
+/*设置*/
+#panel{
+	display: none;
+	z-index: 4;
+}
+#panel label{
+	display: none;
+	border: 1px solid;
+	border-radius: 3px;
+	z-index: 5;
+}
+#panel #changeAvatar{
+	display: none;
+	z-index: 4;
+}

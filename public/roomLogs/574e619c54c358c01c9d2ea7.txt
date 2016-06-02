@@ -1,0 +1,1 @@
+<p>测试进入了房间</p><div class='msg public'><div class='sender'><img src='../images/Logo.jpg' alt='' class='avatar'><b>测试</b></div><p>来聊天吧</p></div>

@@ -1,63 +1,174 @@
 /*重置*/
-body, div{
+body, div, ul, li{
 	margin: 0;
 	padding: 0;
 }
+/*页面元素部分*/
 html, body{
 	height: 100%;
 }
-/*页面元素部分*/
 /*用户列表*/
-#userList{
-	/*position: fixed;*/
+#userPanel{
+	position: fixed;	
 	left: 0;
-	top: 0;
-	float: left;  /*必须设置float 为了右边的框随他移动而移动*/
+	top: 0px;
 	height: 100%;
-	width: 10%;
-	background-color: silver;
+	width: 120px;
+	background-color: #B2C8BB;
+	z-index: 2;
 }
-#userList:hover{
-	animation: expand 1.5s;
-	width: 20%;
+#userPanel #self{
+	text-align: center;
+	border-bottom: 1px solid #fff;
+}
+#userPanel #self b{
+	display: block;
+}
+#userPanel #self #leaveBtn{
+	cursor: pointer;
+	height: 20px;
+	width: 100px;
+	margin-bottom: 5px;
+	border-radius: 3px;
+	border: none;
+	background-color: #FFF5F6;
+}
+#userPanel #self #logout{
+	cursor: pointer;
+}
+#userPanel #self img{
+	width: 50%;
+}
+#userPanel #userList li{
+	list-style: none;
+	text-align: left;
+}
+#userPanel #inviteBtn{
+	cursor: pointer;
+	height: 20px;
+	width: 100px;
+	margin: 5px 10px;
+	border-radius: 3px;
+	border: none;
+	background-color: #FFF5F6;
 }
 /*聊天窗部分*/
 #viewArea{
-	background-color: #EEE;
+	background-color: #FFF5F6;
+	/*float: left;*/
+/*	margin-left: 15%;*/
+	width: 700px;
+	/*height: 500px;	*/
+	/*margin: 2px 150px;*/
+	margin-left: 240px;
+	margin-bottom: 150px;
+	/*overflow: scroll;*/
+	/*overflow-x: hidden;*/
+}
+#viewArea .msg{
+	padding: 8px;
+}
+#viewArea .msg .sender{
+	width: 60px;
+	height: 60px;
 	float: left;
-	width: 90%;
-	height: 250px;	
 }
-#userList:hover+#viewArea{
-	animation: contract 1.5s;
-	width: 80%;
+#viewArea .msg .avatar{
+	/*display: inline;*/
+	float: left;
+	width: 50px;
 }
+#viewArea .msg b{
+	float: left;
+	line-height: 100%;
+}
+#viewArea .msg p{
+	/*display: inline;	*/
+	/*position: absolute;*/
+	/*margin-left: 55px;*/
+	/*float: left;*/
+	margin-left: 75px;
+	/*border: 1px solid black;*/
+	/*border-bottom: 1px solid white;*/
+}
+#viewArea .private{
+	background-color: #B2C8BB;
+	border: 1px solid #FFF5F6;
+}
+.msgImg{
+	margin-left: 75px;
+	height: 100px;
+	cursor: pointer;
+} 
 /*输入框部分*/
 #inputArea{
-	background-color: #DAA;
-	float: left;	
-	width: 90%;
-	height: 250px;		
-}
-#userList:hover+#viewArea+#inputArea{
-	animation: contract 1.5s;
-	width: 80%;
+	position: fixed;
+	bottom: 0;
+	z-index: 1;
+	background-color: #458994;	
+	width: 100%;
+	height: 120px;
+	
 }
 #textArea{
+	resize: none;
 	background-color: white;
-	margin: 5px;
+	margin-top: 6px;
+	margin-left: 260px;
 	height: 80%;
+	width: 480px;
+	border: 1px solid #000;
+	border-radius: 3px;
 }
 #sendBtn{
-	margin-right: 5px;
-	float: right;
+	position: absolute;
+	top: 6px;
+	left: 750px;
+	height: 20px;
+	width: 100px;
+	border-radius: 3px;
+	border: 1px solid #000;
+	background-color: #FFF5F6;
 }
-/*动画部分*/
-@keyframes expand{
-	from {width: 10%;}
-	to {width: 20%;}
+#imgLabel{
+	position: absolute;
+	top: 30px;
+	height: 20px;
+	width: 100px;
+	left: 750px;
+	border-radius: 3px;
+	border: 1px solid #000;
+	background-color: #FFF5F6;
+	text-align: center;
 }
-@keyframes contract{
-	from {width: 90%;}
-	to {width: 80%;}
+#sendImg{
+	display: none;
+}
+#wordCount{
+	position: absolute;
+	left: 200px;
+	top: 6px;
+}
+#mode{
+	display: none;
+	position: absolute;
+	left: 150px;
+	top: 30px;	
+	border: 1px solid #FFF5F6;
+	background-color: #FFF5F6;
+	border-radius: 3px;	
+}
+#tip{
+	position: fixed;
+	width: 300px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	top: 50%;
+	right: 0;
+	display: none;
+	color: #fff;
+	background-color: #000;
+	opacity: 0.5;	
+	z-index: 3
 }

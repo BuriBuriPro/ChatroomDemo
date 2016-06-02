@@ -2,18 +2,38 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Chatroom by BuriBuri</title>
-	<script src="../js/socket.io.js" defer='defer'></script>
-	<script src="../js/chatroom.js" defer='defer'></script>
-	<link rel="stylesheet" href="../css/chatroomStyle.css">
-	<link rel="shortcut icon" type="image/ico" href="favicon.ico">
+	<title>{{roomName}}</title>		
+	<script src="../javascripts/jquery.js" defer="defer"></script>	
+	<script src="../javascripts/socket.io.js" defer="defer"></script>	
+	<script src="../javascripts/chatroom.js" defer='defer'></script>
+	<link rel="stylesheet" href="../stylesheets/chatroom.css">
+	<link rel="shortcut icon" type="image/ico" href="../images/favicon.ico">
 </head>
 <body>
-	<div id="userList">User</div>
-	<div id="viewArea">View</div>
-	<div id="inputArea">
-		<div id="textArea"></div>
-		<button id="sendBtn">发送</button>
+	<div id="userPanel">
+		<div id="self">
+			<b>{{roomName}}</b>
+			<img src={{avatar}} alt="avatar" />
+			<b id="username">{{username}}</b>
+			<button id="leaveBtn">离开房间</button>
+		</div>
+		用户列表 <b id="memberNumber">1</b>/{{max}}
+		<ul id="userList">
+		</ul>
+		<button id="inviteBtn">邀  请</button>
 	</div>
+	<div id="viewArea">
+	{{roomLogData}}
+	</div>
+	<div id="inputArea">
+		<div id="wordCount"><b>0</b>/140</div>
+		<div id="mode">与<b id="privateTarget">sss</b>私聊中</div>
+		<textArea id="textArea" maxLength=140></textArea>
+		<button id="sendBtn">发送</button>
+		<label id="imgLabel">图片
+			<input type="file" id="sendImg">
+		</label>
+	</div>
+	<div id="tip">欢迎来到聊天室, {{username}}</div>
 </body>
 </html>
