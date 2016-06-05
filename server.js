@@ -584,5 +584,5 @@ io.on('connection', function (socket){
 });
 // 设置端口
 var port = process.env.port || 3000;
-server.listen(port);
+server.listen(process.env.VCAP_APP_PORT || 3000);
 console.log('Server is running on ' + port);
